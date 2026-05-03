@@ -1,0 +1,791 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Performance Program H1 2026 — Telavox Direct Sales</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,300..800&family=DM+Sans:opsz,wght@9..40,300..700&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+
+<style>
+:root{
+  --bg:           #0A0B14;
+  --bg-grad:      radial-gradient(ellipse at top, #15182A 0%, #0A0B14 55%);
+  --surface:      #15171F;
+  --surface-2:    #1C1F2A;
+  --surface-3:    #232734;
+  --border:       #2A2D3A;
+  --border-soft:  #1F2230;
+  --text:         #F0F2F8;
+  --text-2:       #B0B4C5;
+  --text-3:       #7A7E92;
+  --text-4:       #555867;
+
+  --challenger:   #6B95FF;
+  --contender:    #3FE0C5;
+  --elite:        #FF8C5C;
+  --visionary:    #FFC857;
+  --below:        #555867;
+
+  --outbound:     #FF8C5C;
+  --inbound:      #3FE0C5;
+  --offline:      #E373B3;
+  --expansion:    #6B95FF;
+
+  --display: 'Bricolage Grotesque', system-ui, sans-serif;
+  --body:    'DM Sans', system-ui, sans-serif;
+  --mono:    'JetBrains Mono', ui-monospace, monospace;
+}
+
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{background:var(--bg);background-image:var(--bg-grad);color:var(--text);font-family:var(--body);font-size:15px;line-height:1.5;-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility;min-height:100vh}
+body{background-attachment:fixed}
+button{font:inherit;color:inherit;background:none;border:none;cursor:pointer}
+input{font:inherit;color:inherit}
+
+/* ---- Layout ---- */
+.wrap{max-width:1280px;margin:0 auto;padding:48px 32px 96px}
+@media (max-width:760px){.wrap{padding:24px 16px 64px}}
+
+/* ---- Header ---- */
+.head{display:flex;justify-content:space-between;align-items:flex-start;gap:24px;margin-bottom:36px;flex-wrap:wrap}
+.brand{display:flex;flex-direction:column;gap:6px}
+.eyebrow{font-family:var(--mono);font-size:11px;letter-spacing:0.18em;text-transform:uppercase;color:var(--text-3);font-weight:600}
+.h1{font-family:var(--display);font-weight:500;font-size:clamp(32px,4.5vw,56px);line-height:1.02;letter-spacing:-0.025em}
+.h1 em{font-style:italic;font-weight:400;color:var(--contender)}
+.subtitle{color:var(--text-2);max-width:540px;margin-top:8px;font-size:14.5px}
+
+.period{display:flex;flex-direction:column;align-items:flex-end;gap:8px;min-width:240px}
+.period-bar{width:240px;height:5px;background:var(--surface-2);border-radius:99px;overflow:hidden;position:relative}
+.period-bar > div{height:100%;background:linear-gradient(90deg,var(--contender),var(--visionary));border-radius:99px}
+.period-text{font-family:var(--mono);font-size:11px;color:var(--text-3);letter-spacing:0.05em}
+.period-text b{color:var(--text);font-weight:600}
+
+/* team chips */
+.scope{display:flex;align-items:center;gap:10px;flex-wrap:wrap;margin-bottom:36px;padding-bottom:20px;border-bottom:1px solid var(--border-soft)}
+.scope-label{font-family:var(--mono);font-size:10.5px;letter-spacing:0.15em;text-transform:uppercase;color:var(--text-3);font-weight:600;margin-right:4px}
+.chip{display:inline-flex;align-items:center;gap:6px;background:var(--surface-2);border:1px solid var(--border);border-radius:99px;padding:6px 12px;font-size:12px;color:var(--text-2);font-weight:500}
+.chip::before{content:"";width:6px;height:6px;border-radius:50%;background:var(--c, var(--contender))}
+
+/* unlock banner */
+.banner{background:linear-gradient(135deg, rgba(63,224,197,0.08), rgba(255,200,87,0.06));border:1px solid var(--border);border-radius:14px;padding:16px 20px;margin-bottom:32px;display:flex;align-items:center;gap:14px;flex-wrap:wrap}
+.banner-icon{width:36px;height:36px;border-radius:10px;background:rgba(255,200,87,0.12);color:var(--visionary);display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.banner-text{flex:1;min-width:200px;font-size:13.5px;color:var(--text-2)}
+.banner-text b{color:var(--text);font-weight:600}
+
+/* ---- Stat strip ---- */
+.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--border-soft);border-radius:18px;overflow:hidden;border:1px solid var(--border);margin-bottom:48px}
+@media (max-width:760px){.stats{grid-template-columns:repeat(2,1fr)}}
+.stat{background:var(--surface);padding:24px 24px 22px}
+.stat-label{font-family:var(--mono);font-size:10.5px;letter-spacing:0.15em;text-transform:uppercase;color:var(--text-3);margin-bottom:14px}
+.stat-value{font-family:var(--display);font-size:clamp(24px, 2.4vw, 34px);line-height:1;font-weight:500;font-variant-numeric:tabular-nums;letter-spacing:-0.02em;white-space:nowrap}
+.stat-meta{font-size:12.5px;color:var(--text-3);margin-top:8px}
+.stat-meta b{color:var(--text-2);font-weight:600}
+
+/* ---- Section ---- */
+.section{margin-bottom:56px}
+.section-head{display:flex;align-items:flex-end;justify-content:space-between;gap:16px;margin-bottom:20px;flex-wrap:wrap}
+.section-title{font-family:var(--display);font-size:22px;font-weight:500;letter-spacing:-0.01em}
+.section-title em{font-style:italic;font-weight:400;color:var(--text-2)}
+.section-sub{font-size:13px;color:var(--text-3);margin-top:4px;max-width:560px}
+
+/* ---- Tier ladder ---- */
+.tiers{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}
+@media (max-width:900px){.tiers{grid-template-columns:repeat(2,1fr)}}
+.tier{background:var(--surface);border:1px solid var(--border);border-radius:14px;padding:20px;position:relative;overflow:hidden;transition:transform .25s ease, border-color .25s ease}
+.tier:hover{transform:translateY(-2px);border-color:var(--surface-3)}
+.tier::before{content:"";position:absolute;top:0;left:0;right:0;height:3px;background:var(--c)}
+.tier-num{font-family:var(--mono);font-size:11px;color:var(--text-3);letter-spacing:0.1em}
+.tier-name{font-family:var(--display);font-size:24px;font-weight:600;letter-spacing:-0.01em;color:var(--c);margin:6px 0 14px}
+.tier-thresh{font-family:var(--display);font-size:30px;font-weight:500;font-variant-numeric:tabular-nums;letter-spacing:-0.02em}
+.tier-thresh small{font-size:13px;color:var(--text-3);font-weight:400;margin-left:4px}
+.tier-mrcm{font-size:12px;color:var(--text-3);margin-top:6px;font-family:var(--mono);line-height:1.7}
+.tier-count{margin-top:18px;display:flex;align-items:baseline;gap:6px;border-top:1px solid var(--border-soft);padding-top:14px}
+.tier-count b{font-family:var(--display);font-size:22px;font-weight:600;color:var(--text)}
+.tier-count span{font-size:12.5px;color:var(--text-3)}
+
+/* ---- Leaderboard controls ---- */
+.controls{display:flex;gap:10px;align-items:center;flex-wrap:wrap}
+.search{position:relative}
+.search input{background:var(--surface);border:1px solid var(--border);border-radius:99px;padding:10px 16px 10px 36px;width:240px;color:var(--text);transition:border-color .2s}
+.search input::placeholder{color:var(--text-4)}
+.search input:focus{outline:none;border-color:var(--contender)}
+.search svg{position:absolute;left:13px;top:50%;transform:translateY(-50%);color:var(--text-3)}
+.sort{display:flex;background:var(--surface);border:1px solid var(--border);border-radius:99px;padding:3px;gap:2px}
+.sort button{padding:7px 14px;font-size:12.5px;color:var(--text-3);border-radius:99px;font-weight:500;font-family:var(--body);transition:all .2s}
+.sort button.on{background:var(--surface-3);color:var(--text)}
+.sort button:hover:not(.on){color:var(--text-2)}
+
+.board{display:flex;flex-direction:column;gap:8px;margin-top:8px}
+
+/* team filter chips */
+.team-filter{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:14px}
+.team-chip{display:inline-flex;align-items:center;gap:7px;background:var(--surface);border:1px solid var(--border);border-radius:99px;padding:7px 14px;font-size:12.5px;color:var(--text-3);cursor:pointer;font-weight:500;transition:all .2s;font-family:var(--body)}
+.team-chip:not([data-team="all"])::before{content:"";width:7px;height:7px;border-radius:50%;background:var(--c, var(--text-3))}
+.team-chip:hover{border-color:var(--surface-3);color:var(--text-2)}
+.team-chip.on{background:var(--surface-3);border-color:var(--surface-3);color:var(--text)}
+.team-chip-count{font-family:var(--mono);font-size:10.5px;color:var(--text-4);margin-left:2px}
+.team-chip.on .team-chip-count{color:var(--text-3)}
+
+/* per-row team tag */
+.row-team{font-family:var(--mono);font-size:10px;letter-spacing:0.12em;text-transform:uppercase;color:var(--text-3);margin-top:4px;display:flex;align-items:center;gap:6px;font-weight:600}
+.row-team::before{content:"";width:6px;height:6px;border-radius:50%;background:var(--team-c, var(--text-3))}
+
+/* row */
+.row{background:var(--surface);border:1px solid var(--border);border-radius:14px;transition:border-color .2s, transform .15s}
+.row:hover{border-color:var(--surface-3)}
+.row.open{border-color:var(--c, var(--surface-3))}
+.row-head{display:grid;grid-template-columns:46px 1.6fr 2.4fr 1fr 24px;gap:18px;align-items:center;padding:16px 22px;cursor:pointer}
+.row-rank{font-family:var(--mono);font-size:12px;color:var(--text-3);font-weight:600}
+.row-name{font-family:var(--display);font-size:16px;font-weight:500;letter-spacing:-0.005em}
+.row-mobile-meta{display:none;flex-direction:row;align-items:baseline;gap:10px;margin-top:2px;flex-wrap:wrap}
+.row-mobile-meta .mr{font-family:var(--display);font-variant-numeric:tabular-nums;font-size:15px;font-weight:600;white-space:nowrap}
+.row-mobile-meta .tag{font-size:10px;color:var(--c, var(--text-3));font-family:var(--mono);letter-spacing:0.1em;text-transform:uppercase;white-space:nowrap}
+
+/* progress bar */
+.row-bar-wrap{position:relative;height:36px;display:flex;align-items:center}
+.row-bar-track{width:100%;height:6px;background:var(--surface-2);border-radius:99px;position:relative;overflow:visible}
+.row-bar-fill{height:100%;border-radius:99px;background:linear-gradient(90deg,var(--challenger) 0%, var(--contender) 33%, var(--elite) 66%, var(--visionary) 100%);transition:width .8s cubic-bezier(.2,.8,.2,1)}
+.row-bar-thumb{position:absolute;top:50%;width:14px;height:14px;border-radius:50%;background:var(--text);box-shadow:0 0 0 3px var(--bg), 0 0 0 4px var(--c);transform:translate(-50%,-50%);transition:left .8s cubic-bezier(.2,.8,.2,1);z-index:2}
+.row-bar-tick{position:absolute;top:50%;width:2px;height:14px;background:var(--border);transform:translate(-50%,-50%);border-radius:2px}
+.row-bar-tick.passed{background:var(--text-3)}
+.row-bar-tick-lab{position:absolute;top:calc(50% + 12px);transform:translateX(-50%);font-family:var(--mono);font-size:9.5px;color:var(--text-4);letter-spacing:0.05em;white-space:nowrap}
+
+.row-tier-side{display:flex;flex-direction:column;align-items:flex-end;gap:2px}
+.row-tier-side .mr{font-family:var(--display);font-variant-numeric:tabular-nums;font-size:18px;font-weight:600;letter-spacing:-0.01em}
+.row-tier-side .tag{font-size:10.5px;color:var(--c, var(--text-3));font-family:var(--mono);letter-spacing:0.1em;text-transform:uppercase;font-weight:600}
+
+.row-chev{color:var(--text-3);transition:transform .25s}
+.row.open .row-chev{transform:rotate(180deg);color:var(--text)}
+
+/* MOBILE row layout */
+@media (max-width:760px){
+  .row-head{grid-template-columns:32px 1fr 22px;gap:12px;padding:14px 16px}
+  .row-bar-wrap{display:none}
+  .row-tier-side{display:none}
+  .row-mobile-meta{display:flex}
+  .row-name{font-size:15px}
+}
+
+/* expanded panel */
+.row-body{display:none;border-top:1px solid var(--border-soft);padding:24px 22px 26px}
+.row.open .row-body{display:block;animation:fade .3s ease}
+@keyframes fade{from{opacity:0;transform:translateY(-4px)}to{opacity:1;transform:none}}
+
+.body-grid{display:grid;grid-template-columns:1.2fr 1fr;gap:32px}
+@media (max-width:900px){.body-grid{grid-template-columns:1fr;gap:24px}}
+
+.body-h{font-family:var(--mono);font-size:10.5px;letter-spacing:0.15em;text-transform:uppercase;color:var(--text-3);margin-bottom:14px}
+
+/* breakdown bars */
+.brk{display:flex;flex-direction:column;gap:10px}
+.brk-row{display:grid;grid-template-columns:1fr 100px;align-items:center;gap:14px}
+.brk-row .lab{font-size:13px;color:var(--text-2);display:flex;align-items:center;gap:8px}
+.brk-row .dot{width:8px;height:8px;border-radius:50%;background:var(--c)}
+.brk-bar{position:relative;height:6px;background:var(--surface-2);border-radius:99px;overflow:hidden;grid-column:1 / -1;margin-top:2px}
+.brk-bar > div{height:100%;background:var(--c);border-radius:99px;transition:width .6s ease}
+.brk-row .val{font-family:var(--mono);font-size:12.5px;font-variant-numeric:tabular-nums;text-align:right;color:var(--text)}
+.brk-total{display:flex;justify-content:space-between;border-top:1px solid var(--border-soft);padding-top:12px;margin-top:8px;font-size:12px}
+.brk-total .v{font-family:var(--mono);font-weight:600}
+
+/* tier status panel */
+.next{background:var(--surface-2);border:1px solid var(--border);border-radius:12px;padding:18px}
+.next-status{font-family:var(--display);font-size:18px;font-weight:500;letter-spacing:-0.005em;margin-bottom:6px}
+.next-status .c{color:var(--c)}
+.next-gap{font-size:13px;color:var(--text-2);margin-bottom:14px}
+.next-gap .num{font-family:var(--mono);color:var(--text);font-weight:600}
+.tierlist{display:flex;flex-direction:column;gap:0;margin-bottom:14px}
+.tier-item{display:flex;align-items:flex-start;gap:11px;padding:11px 0;border-bottom:1px solid var(--border-soft)}
+.tier-item:last-child{border-bottom:none}
+.tier-item .tier-icon{margin-top:3px;flex-shrink:0;color:var(--c)}
+.tier-item.locked .tier-icon{color:var(--text-4)}
+.tier-item-content{flex:1;min-width:0}
+.tier-item-head{font-size:13px;color:var(--text-2);margin-bottom:5px;line-height:1.3}
+.tier-item-head b{color:var(--text);font-weight:600}
+.tier-item.locked .tier-item-head{color:var(--text-3)}
+.tier-item.locked .tier-item-head b{color:var(--text-2);font-weight:500}
+.tier-item-perks{display:flex;flex-wrap:wrap;gap:5px}
+.tier-item-perks span{font-size:11px;background:rgba(255,255,255,0.04);border:1px solid var(--border-soft);color:var(--text-2);padding:3px 8px;border-radius:6px;font-weight:500}
+.tier-item.unlocked .tier-item-perks span{background:color-mix(in srgb, var(--c) 12%, transparent);border-color:color-mix(in srgb, var(--c) 25%, transparent);color:var(--text)}
+.tier-item.locked .tier-item-perks span{color:var(--text-4);background:transparent}
+.unlock-note{display:flex;align-items:center;gap:8px;font-size:12px;color:var(--text-3);padding-top:12px;border-top:1px solid var(--border)}
+.unlock-note svg{color:var(--visionary);flex-shrink:0}
+.unlock-note b{color:var(--text-2);font-weight:600}
+
+/* benefits used (next period) */
+.used{margin-top:18px}
+.used-empty{background:var(--surface-2);border:1px dashed var(--border);border-radius:10px;padding:14px;font-size:12.5px;color:var(--text-3);display:flex;align-items:center;gap:10px}
+.used-empty svg{color:var(--text-4);flex-shrink:0}
+.used-list{display:flex;flex-direction:column;gap:8px}
+.used-item{display:flex;justify-content:space-between;align-items:center;padding:10px 12px;background:var(--surface-2);border:1px solid var(--border-soft);border-radius:10px;font-size:13px;gap:10px}
+.used-item .lab{color:var(--text)}
+.used-item .meta{font-family:var(--mono);font-size:11px;color:var(--text-3);text-align:right;white-space:nowrap}
+
+/* ---- Benefits matrix ---- */
+.bensec{background:var(--surface);border:1px solid var(--border);border-radius:18px;overflow:hidden}
+.bentbl{width:100%;border-collapse:collapse;font-size:13px}
+.bentbl th, .bentbl td{padding:14px 16px;text-align:left;border-bottom:1px solid var(--border-soft);vertical-align:top}
+.bentbl th{font-family:var(--mono);font-size:10.5px;letter-spacing:0.15em;text-transform:uppercase;color:var(--text-3);font-weight:600;background:var(--surface-2)}
+.bentbl th.tier-h{color:var(--c);position:relative}
+.bentbl th.tier-h::after{content:"";position:absolute;top:0;left:0;right:0;height:2px;background:var(--c)}
+.bentbl tr:last-child td{border-bottom:none}
+.bentbl td.lab{color:var(--text-2);font-weight:500}
+.bentbl td:not(.lab){color:var(--text-2)}
+.bentbl tr:hover td{background:rgba(255,255,255,0.015)}
+@media (max-width:760px){
+  .bentbl-wrap{overflow-x:auto}
+  .bentbl{min-width:560px}
+}
+
+/* footer */
+.foot{margin-top:80px;padding-top:24px;border-top:1px solid var(--border-soft);display:flex;justify-content:space-between;flex-wrap:wrap;gap:16px;font-size:12px;color:var(--text-4)}
+.foot a{color:var(--text-3);text-decoration:none}
+
+/* row entry animation */
+.row{opacity:0;transform:translateY(8px);animation:rowin .5s ease forwards}
+@keyframes rowin{to{opacity:1;transform:none}}
+</style>
+</head>
+<body>
+
+<div class="wrap">
+
+  <!-- HEADER -->
+  <header class="head">
+    <div class="brand">
+      <div class="eyebrow">Telavox · Direct Sales</div>
+      <h1 class="h1">Performance <em>Program</em><br>H1 2026</h1>
+      <p class="subtitle">Live tracking against the four program tiers. Click a row to see the full breakdown and the gap to the next tier.</p>
+    </div>
+    <div class="period">
+      <div class="period-text"><b>1 Jan 2026</b> — <b>30 Jun 2026</b></div>
+      <div class="period-bar"><div id="periodFill" style="width:0%"></div></div>
+      <div class="period-text"><span id="periodText">— of 180 days</span></div>
+    </div>
+  </header>
+
+  <!-- SCOPE / TEAMS -->
+  <div class="scope">
+    <span class="scope-label">Included teams</span>
+    <span class="chip" style="--c:var(--challenger)">Malmö Inbound</span>
+    <span class="chip" style="--c:var(--contender)">Malmö Outbound</span>
+    <span class="chip" style="--c:var(--elite)">Stockholm</span>
+    <span class="chip" style="--c:var(--visionary)">Norway</span>
+    <span class="scope-label" style="margin-left:auto">Excluded</span>
+    <span class="chip" style="--c:var(--text-4)">Acquisition Business</span>
+  </div>
+
+  <!-- UNLOCK BANNER -->
+  <div class="banner">
+    <div class="banner-icon">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+    </div>
+    <div class="banner-text">
+      H1 2026 is the <b>qualifying period</b>. To qualify, reps must hit all three thresholds: <b>Booked MRR</b> + <b>MRCM</b> + <b>individual budget</b> achievement (½ Q for Contender, 2/2 Q for Elite & Visionary). This dashboard tracks Booked MRR — final tier confirmation includes MRCM and quarterly budget. <b>All benefits activate on 1 Jul 2026</b> for the next measurement period.
+    </div>
+  </div>
+
+  <!-- STATS -->
+  <section class="stats">
+    <div class="stat">
+      <div class="stat-label">Participants</div>
+      <div class="stat-value" id="statSellers">—</div>
+      <div class="stat-meta">active in program</div>
+    </div>
+    <div class="stat">
+      <div class="stat-label">Total Booked MRR</div>
+      <div class="stat-value" id="statTotal">—</div>
+      <div class="stat-meta">YTD, excl. Acquisition</div>
+    </div>
+    <div class="stat">
+      <div class="stat-label">At MRR threshold</div>
+      <div class="stat-value" id="statQualified">—</div>
+      <div class="stat-meta">of <b id="statSellers2">—</b> · MRR criterion only</div>
+    </div>
+    <div class="stat">
+      <div class="stat-label">Average MRR</div>
+      <div class="stat-value" id="statAvg">—</div>
+      <div class="stat-meta">per participant</div>
+    </div>
+  </section>
+
+  <!-- TIER LADDER -->
+  <section class="section">
+    <div class="section-head">
+      <div>
+        <h2 class="section-title">Tiers <em>and thresholds</em></h2>
+        <div class="section-sub">Booked MRR required to qualify. MRCM requirements shown separately per tier.</div>
+      </div>
+    </div>
+    <div class="tiers" id="tiers"></div>
+  </section>
+
+  <!-- LEADERBOARD -->
+  <section class="section">
+    <div class="section-head">
+      <div>
+        <h2 class="section-title">Leaderboard <em>· your position</em></h2>
+        <div class="section-sub">The marker on each line shows current standing. The line spans 0 → 130 000 kr (Visionary threshold).</div>
+      </div>
+      <div class="controls">
+        <div class="search">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><circle cx="11" cy="11" r="7"/><path d="m20 20-3-3"/></svg>
+          <input id="search" type="text" placeholder="Search by name…">
+        </div>
+        <div class="sort">
+          <button class="on" data-sort="mrr">MRR</button>
+          <button data-sort="name">Name</button>
+        </div>
+      </div>
+    </div>
+    <div class="team-filter" id="teamFilter"></div>
+    <div class="board" id="board"></div>
+  </section>
+
+  <!-- BENEFITS MATRIX -->
+  <section class="section">
+    <div class="section-head">
+      <div>
+        <h2 class="section-title">Benefits <em>per tier</em></h2>
+        <div class="section-sub">What you unlock as you climb — applied during the next measurement period.</div>
+      </div>
+    </div>
+    <div class="bensec">
+      <div class="bentbl-wrap">
+        <table class="bentbl">
+          <thead>
+            <tr>
+              <th>Benefit</th>
+              <th class="tier-h" style="--c:var(--challenger)">Challenger</th>
+              <th class="tier-h" style="--c:var(--contender)">Contender</th>
+              <th class="tier-h" style="--c:var(--elite)">Elite</th>
+              <th class="tier-h" style="--c:var(--visionary)">Visionary</th>
+            </tr>
+          </thead>
+          <tbody id="benefitsBody"></tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <footer class="foot">
+    <div>Source: HubSpot · Signed MRR This Year (Sales LE) · last updated <span id="footUpdated">—</span></div>
+    <div>Excluded: Acquisition Business · 4 reps per leadership</div>
+  </footer>
+
+</div>
+
+<script>
+/* ============================================================
+   DATA — replace this object when refreshing from HubSpot.
+   Keep the schema identical: any pipeline (GitHub Action,
+   Zapier, custom backend) only needs to overwrite this block.
+   ============================================================ */
+const DATA = {
+  lastUpdated: "2026-05-02",
+  period: {
+    start: "2026-01-01",
+    end:   "2026-06-30",
+    benefitsActivate: "2026-07-01"
+  },
+  teams: ["Malmö Inbound", "Malmö Outbound", "Stockholm", "Norway"],
+  excludedDealTypes: ["Acquisition Business"],
+  excludedReps: [
+    "Viktor Sandgren", "Josef Lundh", "Hans Klasenius", "Filip Kirsten",
+    "Mikael Grönlund", "Kasper Wacker Hahn", "Eric Garcia", "Aleksi Kröger"
+  ],
+  tiers: [
+    {key:"challenger", name:"Challenger", mrr:40000,  mrcm:12000, budget:"X"},
+    {key:"contender",  name:"Contender",  mrr:60000,  mrcm:20000, budget:"½ Q"},
+    {key:"elite",      name:"Elite",      mrr:90000,  mrcm:30000, budget:"2/2 Q"},
+    {key:"visionary",  name:"Visionary",  mrr:130000, mrcm:30000, budget:"2/2 Q"},
+  ],
+  /* Each seller: total is summed from `types`. `benefitsUsed` is for
+     next period — populate once benefits activate on 1 Jul 2026. */
+  sellers: [
+    /* Norway */
+    {name:"Tania Johansen",            team:"Norway",          types:{"NB Outbound":60314.31, "NB Inbound":41115.59, "NB Offline Inbound":109366.77}, benefitsUsed:[]},
+    {name:"Alexander Trøftbråten",     team:"Norway",          types:{"NB Outbound":21658, "NB Inbound":5504.88}, benefitsUsed:[]},
+    {name:"Jonathan Dean",             team:"Norway",          types:{"NB Outbound":12096, "NB Inbound":4133}, benefitsUsed:[]},
+
+    /* Stockholm */
+    {name:"Olivia Merdanovic",         team:"Stockholm",       types:{"NB Outbound":46075.5}, benefitsUsed:[]},
+    {name:"Jesper Kuronen",            team:"Stockholm",       types:{"NB Outbound":29064, "NB Inbound":1246}, benefitsUsed:[]},
+    {name:"Dennis Fagerström",         team:"Stockholm",       types:{"NB Outbound":28603}, benefitsUsed:[]},
+    {name:"Joel Robertsson",           team:"Stockholm",       types:{"NB Outbound":9147.5}, benefitsUsed:[]},
+    {name:"Marcus Johansson",          team:"Stockholm",       types:{"NB Outbound":4898}, benefitsUsed:[]},
+
+    /* Malmö Outbound */
+    {name:"Alexander Al-Kawaz Bergman",team:"Malmö Outbound",  types:{"NB Outbound":105958}, benefitsUsed:[]},
+    {name:"Felipe Leiva C.",           team:"Malmö Outbound",  types:{"NB Outbound":36150}, benefitsUsed:[]},
+    {name:"Dominic Mendy",             team:"Malmö Outbound",  types:{"NB Outbound":18325, "NB Inbound":16515, "Expansion Inbound":1130}, benefitsUsed:[]},
+    {name:"Linus Hovler",              team:"Malmö Outbound",  types:{"NB Outbound":4551.5, "Expansion Outbound":3999, "NB Offline Inbound":22740}, benefitsUsed:[]},
+    {name:"Patrik J",                  team:"Malmö Outbound",  types:{}, benefitsUsed:[]},
+
+    /* Malmö Inbound */
+    {name:"Fredrik Hamrin",            team:"Malmö Inbound",   types:{"NB Inbound":77527, "Expansion Inbound":149}, benefitsUsed:[]},
+    {name:"André Duda",                team:"Malmö Inbound",   types:{"NB Outbound":31731, "NB Inbound":23928}, benefitsUsed:[]},
+    {name:"Simon Dahl",                team:"Malmö Inbound",   types:{"NB Outbound":4797, "NB Inbound":34195, "Expansion Outbound":3999}, benefitsUsed:[]},
+  ]
+};
+
+/* ============================================================
+   Static labels & color tokens
+   ============================================================ */
+const TIER_COLORS = {
+  challenger:"var(--challenger)", contender:"var(--contender)",
+  elite:"var(--elite)", visionary:"var(--visionary)"
+};
+const TYPE_COLORS = {
+  "NB Outbound":         "var(--outbound)",
+  "NB Inbound":          "var(--inbound)",
+  "NB Offline Inbound":  "var(--offline)",
+  "Expansion Outbound":  "var(--expansion)",
+  "Expansion Inbound":   "var(--expansion)",
+};
+const TEAM_COLORS = {
+  "Malmö Inbound":  "var(--challenger)",
+  "Malmö Outbound": "var(--contender)",
+  "Stockholm":      "var(--elite)",
+  "Norway":         "var(--visionary)",
+};
+const BENEFITS = [
+  {label:"Bonus Multiplier",            v:["As today",                "As today",                          "+25 %",                              "+50 %"]},
+  {label:"SDR Leads",                   v:["Connect to right Agent",  "SoHo + SME",                        "Priority SME + Mid Market",          "Preferred Higher Segments"]},
+  {label:"Telavox Hours",               v:["As today",                "As today",                          "+8 hours",                           "+16 hours"]},
+  {label:"Incentive Trip · Barcelona",  v:["—",                       "—",                                 "1 person · flight & hotel",          "2 people · flight & hotel + champagne"]},
+  {label:"KickOffs & Social",           v:["Standard",                "Standard",                          "Superior Room",                      "Deluxe Room incl. Champagne"]},
+  {label:"Recurring Bonus",             v:["—",                       "—",                                 "Eligible",                           "Eligible"]},
+  {label:"Gift Card Dinner",            v:["—",                       "—",                                 "2 500 kr",                           "5 000 kr"]},
+  {label:"Executive Business Coaching", v:["—",                       "—",                                 "5 000 kr",                           "15 000 kr"]},
+  {label:"Retreat Package 2P",          v:["—",                       "1 breakfast · Strawberry Hotels",   "Day Spa incl. lunch · ESS Group",    "Weekend for 2 incl. dinner · ESS Group"]},
+  {label:"Elite Lunch",                 v:["—",                       "—",                                 "Yes",                                "Yes"]},
+  {label:"Branded Merch",               v:["T-shirt",                 "Hoodie",                            "Vest",                               "Jacket"]},
+];
+
+/* The 3 most distinctive benefits to show per tier in the per-rep status panel.
+   Full benefits matrix is shown lower on the page. */
+const TIER_HIGHLIGHTS = {
+  challenger: ["Branded T-shirt",            "Connect to right Agent",   "Standard support"],
+  contender:  ["Branded Hoodie",             "Strawberry Hotels stay",   "SoHo + SME leads"],
+  elite:      ["Barcelona trip · 1 person",  "+25 % bonus multiplier",   "Day Spa retreat"],
+  visionary:  ["Barcelona deluxe · 2 people","+50 % bonus multiplier",   "Weekend retreat · ESS Group"],
+};
+
+/* ============================================================
+   Derived state
+   ============================================================ */
+const TIERS = DATA.tiers.map(t => ({...t, color: TIER_COLORS[t.key]}));
+const MAX = TIERS[TIERS.length - 1].mrr;
+const SELLERS = DATA.sellers.map(s => {
+  const total = Object.values(s.types).reduce((a,b)=>a+b, 0);
+  let cur = null;
+  for(const t of TIERS) if(total >= t.mrr) cur = t;
+  const idx = cur ? TIERS.indexOf(cur) : -1;
+  const next = idx < TIERS.length - 1 ? TIERS[idx+1] : null;
+  return {
+    ...s,
+    total,
+    tier: cur,
+    next,
+    gap: next ? Math.max(0, next.mrr - total) : 0,
+    tierColor: cur ? cur.color : "var(--below)",
+    tierName:  cur ? cur.name  : "Below Challenger",
+  };
+});
+
+const benefitsActiveDate = new Date(DATA.period.benefitsActivate);
+const refDate = new Date(DATA.lastUpdated);
+const benefitsActive = refDate >= benefitsActiveDate;
+const unlockDateLabel = benefitsActiveDate.toLocaleDateString('en-GB', {day:'numeric', month:'short', year:'numeric'});
+
+/* ============================================================
+   Helpers
+   ============================================================ */
+const fmt = n => Math.round(n).toLocaleString('sv-SE') + ' kr';
+const fmtShort = n => n >= 1000 ? (n/1000).toLocaleString('sv-SE',{maximumFractionDigits:1}) + 'k' : Math.round(n).toString();
+
+/* ============================================================
+   RENDER
+   ============================================================ */
+
+/* Period bar */
+(function(){
+  const start = new Date(DATA.period.start);
+  const end   = new Date(DATA.period.end);
+  const total = (end - start) / 86400000;
+  const done  = Math.max(0, Math.min(total, (refDate - start) / 86400000));
+  const pct = (done / total) * 100;
+  document.getElementById('periodFill').style.width = pct.toFixed(1) + '%';
+  document.getElementById('periodText').innerHTML =
+    `<b>${Math.round(done)}</b> of ${Math.round(total)} days · <b>${Math.round(total - done)}</b> left`;
+  document.getElementById('footUpdated').textContent =
+    refDate.toLocaleDateString('en-GB',{day:'numeric',month:'short',year:'numeric'});
+})();
+
+/* Stats */
+(function(){
+  const total = SELLERS.reduce((a,s)=>a+s.total, 0);
+  const qualified = SELLERS.filter(s => s.tier).length;
+  document.getElementById('statSellers').textContent = SELLERS.length;
+  document.getElementById('statSellers2').textContent = SELLERS.length;
+  document.getElementById('statTotal').textContent = fmt(total);
+  document.getElementById('statQualified').textContent = qualified;
+  document.getElementById('statAvg').textContent = fmt(total / SELLERS.length);
+})();
+
+/* Tier ladder */
+(function(){
+  const root = document.getElementById('tiers');
+  TIERS.forEach((t, i) => {
+    const inclCount = SELLERS.filter(s => s.tier && TIERS.indexOf(s.tier) >= i).length;
+    const div = document.createElement('div');
+    div.className = 'tier';
+    div.style.setProperty('--c', t.color);
+    div.innerHTML = `
+      <div class="tier-num">Level 0${i+1}</div>
+      <div class="tier-name">${t.name}</div>
+      <div class="tier-thresh">${fmt(t.mrr).replace(' kr','')}<small>kr Booked MRR</small></div>
+      <div class="tier-mrcm">MRCM ≥ ${fmt(t.mrcm)}<br>Budget · ${t.budget}</div>
+      <div class="tier-count"><b>${inclCount}</b><span>rep${inclCount===1?'':'s'} at MRR threshold or above</span></div>
+    `;
+    root.appendChild(div);
+  });
+})();
+
+/* Benefits matrix */
+(function(){
+  const tb = document.getElementById('benefitsBody');
+  BENEFITS.forEach(b => {
+    const tr = document.createElement('tr');
+    tr.innerHTML = `<td class="lab">${b.label}</td>` + b.v.map(v => `<td>${v}</td>`).join('');
+    tb.appendChild(tr);
+  });
+})();
+
+/* Leaderboard */
+let sortMode = 'mrr';
+let searchQ  = '';
+let teamFilter = 'all';
+
+/* Team filter chips */
+(function(){
+  const root = document.getElementById('teamFilter');
+  const all = document.createElement('button');
+  all.className = 'team-chip on';
+  all.dataset.team = 'all';
+  all.innerHTML = `All teams <span class="team-chip-count">${SELLERS.length}</span>`;
+  root.appendChild(all);
+  DATA.teams.forEach(t => {
+    const count = SELLERS.filter(s => s.team === t).length;
+    const btn = document.createElement('button');
+    btn.className = 'team-chip';
+    btn.dataset.team = t;
+    btn.style.setProperty('--c', TEAM_COLORS[t] || 'var(--text-3)');
+    btn.innerHTML = `${t} <span class="team-chip-count">${count}</span>`;
+    root.appendChild(btn);
+  });
+  root.querySelectorAll('.team-chip').forEach(b => {
+    b.addEventListener('click', () => {
+      root.querySelectorAll('.team-chip').forEach(x => x.classList.remove('on'));
+      b.classList.add('on');
+      teamFilter = b.dataset.team;
+      renderBoard();
+    });
+  });
+})();
+
+function renderBoard(){
+  const root = document.getElementById('board');
+  root.innerHTML = '';
+  let list = SELLERS.slice();
+  if(teamFilter !== 'all') list = list.filter(s => s.team === teamFilter);
+  if(sortMode === 'mrr') list.sort((a,b)=>b.total - a.total);
+  else                   list.sort((a,b)=>a.name.localeCompare(b.name, 'sv'));
+  if(searchQ) list = list.filter(s => s.name.toLowerCase().includes(searchQ.toLowerCase()));
+
+  list.forEach((s, idx) => {
+    const pct = Math.min(100, (s.total / MAX) * 100);
+    const row = document.createElement('div');
+    row.className = 'row';
+    row.style.animationDelay = (idx * 0.03) + 's';
+    row.style.setProperty('--c', s.tierColor);
+
+    /* progress ticks */
+    const ticks = TIERS.map(t => {
+      const tpct = (t.mrr / MAX) * 100;
+      const passed = s.total >= t.mrr ? 'passed' : '';
+      return `<div class="row-bar-tick ${passed}" style="left:${tpct}%"></div>
+              <div class="row-bar-tick-lab" style="left:${tpct}%">${fmtShort(t.mrr)}</div>`;
+    }).join('');
+
+    const head = `
+      <div class="row-head">
+        <div class="row-rank">${String(idx+1).padStart(2,'0')}</div>
+        <div>
+          <div class="row-name">${s.name}</div>
+          <div class="row-team" style="--team-c:${TEAM_COLORS[s.team]||'var(--text-3)'}">${s.team}</div>
+          <div class="row-mobile-meta">
+            <div class="mr">${fmt(s.total)}</div>
+            <div class="tag">${s.tierName}</div>
+          </div>
+        </div>
+        <div class="row-bar-wrap">
+          <div class="row-bar-track">
+            <div class="row-bar-fill" style="width:${pct}%"></div>
+            ${ticks}
+            <div class="row-bar-thumb" style="left:${pct}%"></div>
+          </div>
+        </div>
+        <div class="row-tier-side">
+          <div class="mr">${fmt(s.total)}</div>
+          <div class="tag">${s.tierName}</div>
+        </div>
+        <div class="row-chev">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m6 9 6 6 6-6"/></svg>
+        </div>
+      </div>
+    `;
+
+    /* breakdown */
+    const typeEntries = Object.entries(s.types);
+    let brk;
+    if(typeEntries.length === 0){
+      brk = `<div class="used-empty" style="margin:0">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 8v4l3 2"/></svg>
+        No deals booked yet this period.
+      </div>`;
+    } else {
+      const max = Math.max(...typeEntries.map(([,v])=>v));
+      brk = typeEntries
+        .sort((a,b)=>b[1]-a[1])
+        .map(([k,v]) => {
+          const w = max > 0 ? (v / max) * 100 : 0;
+          return `
+            <div class="brk-row" style="--c:${TYPE_COLORS[k]||'var(--text-3)'}">
+              <div class="lab"><span class="dot"></span>${k}</div>
+              <div class="val">${fmt(v)}</div>
+              <div class="brk-bar"><div style="width:${w}%"></div></div>
+            </div>
+          `;
+        }).join('');
+    }
+
+    /* tier status text */
+    let statusHTML = '';
+    if(s.tier && !s.next){
+      statusHTML = `
+        <div class="next-status">MRR at <span class="c">${s.tier.name}</span> · top MRR threshold</div>
+        <div class="next-gap">Maximum MRR threshold reached this period.</div>`;
+    } else if(s.tier){
+      statusHTML = `
+        <div class="next-status">MRR position: <span class="c">${s.tier.name}</span> · aiming for <span style="color:${s.next.color}">${s.next.name}</span></div>
+        <div class="next-gap"><span class="num">${fmt(s.gap)}</span> to next MRR threshold</div>`;
+    } else {
+      statusHTML = `
+        <div class="next-status">Tracking toward <span style="color:${s.next.color}">${s.next.name}</span></div>
+        <div class="next-gap"><span class="num">${fmt(s.gap)}</span> to MRR threshold</div>`;
+    }
+
+    const tierItems = TIERS.map(t => {
+      const has = s.total >= t.mrr;
+      const perks = TIER_HIGHLIGHTS[t.key] || [];
+      return `<div class="tier-item ${has?'unlocked':'locked'}" style="--c:${t.color}">
+        <svg class="tier-icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+          ${has ? '<path d="M20 6 9 17l-5-5"/>' : '<rect x="4" y="11" width="16" height="10" rx="2"/><path d="M8 11V7a4 4 0 0 1 8 0v4"/>'}
+        </svg>
+        <div class="tier-item-content">
+          <div class="tier-item-head"><b>${t.name}</b> · ${fmt(t.mrr)}</div>
+          <div class="tier-item-perks">${perks.map(p => `<span>${p}</span>`).join('')}</div>
+        </div>
+      </div>`;
+    }).join('');
+
+    /* unlock note (during qualifying period) */
+    const unlockHTML = !benefitsActive ? `
+      <div class="unlock-note">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/>
+        </svg>
+        <span>Benefits unlock <b>${unlockDateLabel}</b>. Final tier requires Booked MRR + MRCM + budget achievement.</span>
+      </div>` : '';
+
+    /* benefits used (shown once benefits are active) */
+    let usedHTML = '';
+    if(benefitsActive){
+      if(s.benefitsUsed && s.benefitsUsed.length){
+        usedHTML = `
+          <div class="used">
+            <div class="body-h">Benefits utilized this period</div>
+            <div class="used-list">
+              ${s.benefitsUsed.map(b => `
+                <div class="used-item">
+                  <span class="lab">${b.benefit}</span>
+                  <span class="meta">${b.date}${b.note ? ' · ' + b.note : ''}</span>
+                </div>`).join('')}
+            </div>
+          </div>`;
+      } else {
+        usedHTML = `
+          <div class="used">
+            <div class="body-h">Benefits utilized this period</div>
+            <div class="used-empty">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 8v4l3 2"/></svg>
+              No benefits utilized yet this period.
+            </div>
+          </div>`;
+      }
+    }
+
+    const body = `
+      <div class="row-body">
+        <div class="body-grid">
+          <div>
+            <div class="body-h">Breakdown · approved deal types</div>
+            <div class="brk">${brk}</div>
+            <div class="brk-total"><span style="color:var(--text-3)">Total YTD</span><span class="v">${fmt(s.total)}</span></div>
+          </div>
+          <div>
+            <div class="body-h">Tier status</div>
+            <div class="next" style="--c:${s.tierColor}">
+              ${statusHTML}
+              <div class="tierlist">${tierItems}</div>
+              ${unlockHTML}
+            </div>
+            ${usedHTML}
+          </div>
+        </div>
+      </div>
+    `;
+
+    row.innerHTML = head + body;
+    row.querySelector('.row-head').addEventListener('click', () => {
+      row.classList.toggle('open');
+    });
+    root.appendChild(row);
+  });
+
+  if(list.length === 0){
+    root.innerHTML = `<div style="text-align:center;padding:48px;color:var(--text-3);font-size:14px">No reps match "${searchQ}".</div>`;
+  }
+}
+renderBoard();
+
+/* Interactions */
+document.getElementById('search').addEventListener('input', e => {
+  searchQ = e.target.value.trim();
+  renderBoard();
+});
+document.querySelectorAll('.sort button').forEach(b => {
+  b.addEventListener('click', () => {
+    document.querySelectorAll('.sort button').forEach(x => x.classList.remove('on'));
+    b.classList.add('on');
+    sortMode = b.dataset.sort;
+    renderBoard();
+  });
+});
+</script>
+
+</body>
+</html>
